@@ -18,6 +18,7 @@ MySQLDatabase::set_connection_charset('utf8');
 // This line set's the current theme. More themes can be
 // downloaded from http://www.silverstripe.org/themes/
 SSViewer::set_theme('blackcandy');
+Security::setDefaultAdmin("admin","password1");
 
 Director::set_environment_type("dev");
 
