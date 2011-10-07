@@ -3,15 +3,11 @@
 global $project;
 $project = 'mysite';
 
-global $databaseConfig;
-$databaseConfig = array(
-	"type" => 'MySQLDatabase',
-	"server" => 'localhost',
-	"username" => '',
-	"password" => '',
-	"database" => 'sextingapp',
-	"path" => '',
-);
+global $database;
+$database = 'db_name';
+
+// Use _ss_environment.php file for configuration
+require_once("conf/ConfigureFromEnv.php");
 
 MySQLDatabase::set_connection_charset('utf8');
 
