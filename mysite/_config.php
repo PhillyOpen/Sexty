@@ -7,8 +7,8 @@ global $databaseConfig;
 $databaseConfig = array(
 	"type" => 'MySQLDatabase',
 	"server" => 'localhost',
-	"username" => '',
-	"password" => '',
+	"username" => 'root',
+	"password" => 'd3v-Emelle',
 	"database" => 'sextingapp',
 	"path" => '',
 );
