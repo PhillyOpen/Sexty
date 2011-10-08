@@ -3,21 +3,18 @@
 global $project;
 $project = 'mysite';
 
-global $databaseConfig;
-$databaseConfig = array(
-	"type" => 'MySQLDatabase',
-	"server" => 'localhost',
-	"username" => 'root',
-	"password" => 'd3v-Emelle',
-	"database" => 'sextingapp',
-	"path" => '',
-);
+global $database;
+$database = 'sextingapp';
+
+// Use _ss_environment.php file for configuration
+require_once("conf/ConfigureFromEnv.php");
 
 MySQLDatabase::set_connection_charset('utf8');
 
 // This line set's the current theme. More themes can be
 // downloaded from http://www.silverstripe.org/themes/
 SSViewer::set_theme('blackcandy');
+Security::setDefaultAdmin("admin","password1");
 
 Director::set_environment_type("dev");
 
